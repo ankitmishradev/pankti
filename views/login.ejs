@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %> 
+    <title>Login to Pankti &middot; Pankti</title>
+</head>
+<body class="bg-pri pd-0">
+    <header class="authentication-panel-header">
+        <div class="logo fill-height d-flex centered">
+            <a href="#" class="d-flex fill-height">
+                <img src="/icon/logo/logo.png" alt="Logo">
+                <span class="d-flex align-end fill-height" style="margin-left:-7px">ankti</span>
+            </a>
+        </div>
+    </header>
+    <main class="authentication-panel-main centered">
+        <div class="login-panel">
+            <section>
+                <header class="block">
+                    Sign in to Pankti
+                </header>
+                <main class="block">
+                    <form action="/" method="post">
+                        <section>
+                            <label for="username" class="d-block">Username or email address</label>
+                            <input type="text" name="username" id="username" autocapitalize="off" autocomplete="username" autofocus>
+                        </section>
+                        <section class="p-rel">
+                            <section class="d-flex justify-between">
+                                <label for="password">Password</label>
+                                <a href="#" class="link">Forgot password?</a>
+                            </section>
+                            <input type="password" name="password" id="password">
+                        </section>
+                        <section>
+                            <button type="submit">Sign In</button>
+                        </section>
+                    </form>
+                </main>
+                <footer>
+                    <div class="block txt-c">
+                        New to Pankti? <a href="/join" class="link"> Create new account.</a>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </main>
+    <footer class="authentication-panel-footer">
+        <section class="d-flex fill-height fill-width centered">
+            <a href="#" class="link">Terms</a>
+            <a href="#" class="link">Privacy</a>
+            <a href="#" class="link">Security</a>
+            <a href="#" class="link">Security</a>
+        </section>
+    </footer>
+</body>
+</html>

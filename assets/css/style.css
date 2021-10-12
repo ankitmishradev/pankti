@@ -1,0 +1,719 @@
+*, *::after, *::before, *::placeholder {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  color: #494949;
+  background-color: #c8c8c8;
+  padding: 3.5rem 20% 0 20%;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex, .post-shortcut main form, .content-type-3 .cont-foot div, .container-type-3 .content .cont-foot div, .content-type-3 .cont-foot, .container-type-3 .content .cont-foot, .content-type-3 .cont-head .cont-head-user-img a.refer-to-user, .container-type-3 .content .cont-head .cont-head-user-img a.refer-to-user, .content-type-3 .cont-head, .container-type-3 .content .cont-head, .content-type-2 .cont-head, .container-type-2 .content .cont-head, .content-type-1 .cont-head .cont-head-user-img a.refer-to-user, .container-type-1 .content .cont-head .cont-head-user-img a.refer-to-user, .content-type-1 .cont-head, .container-type-1 .content .cont-head, .container main ul li, .post-shortcut main ul li, .container main ul, .post-shortcut main ul, .container main, .post-shortcut main, .container header, .post-shortcut header, .hot-notification-container li a .notification-card, .hot-notification-container li a, .left-sidebar ul li a, .left-sidebar, .right-sidebar main .container a .shortcut-description, .right-sidebar main .post-shortcut a .shortcut-description, .right-sidebar main .container a div, .right-sidebar main .post-shortcut a div, .right-sidebar main .container a, .right-sidebar main .post-shortcut a, .right-sidebar main .container, .right-sidebar main .post-shortcut, .left-sidebar header a, .right-sidebar header a, .header .r-side, .header .m-side .main-navigation ul, .header .l-side, .header {
+  display: flex;
+}
+
+.i-flex {
+  display: inline-flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flow-col, .container main ul li, .post-shortcut main ul li, .left-sidebar footer, .left-sidebar, .right-sidebar main .container a .shortcut-description, .right-sidebar main .post-shortcut a .shortcut-description {
+  flex-direction: column;
+}
+
+.justify-between, .content-type-3 .cont-foot, .container-type-3 .content .cont-foot, .container header, .post-shortcut header {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end, .content-type-2 .cont-head, .container-type-2 .content .cont-head, .header .r-side {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.align-between {
+  align-items: space-between;
+}
+
+.align-around {
+  align-items: space-around;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center, .post-shortcut main, .container header, .post-shortcut header, .left-sidebar ul li a, .left-sidebar header a, .right-sidebar header a {
+  align-items: center;
+}
+
+.centered, .post-shortcut main form button, .content-type-3 .cont-foot div a button, .container-type-3 .content .cont-foot div a button, .content-type-3 .cont-foot div a, .container-type-3 .content .cont-foot div a, .content-type-3 .cont-head .cont-head-user-cntrl button, .container-type-3 .content .cont-head .cont-head-user-cntrl button, .content-type-3 .cont-head .cont-head-subject, .container-type-3 .content .cont-head .cont-head-subject, .content-type-2 .cont-foot a.refer-to-source button, .container-type-2 .content .cont-foot a.refer-to-source button, .content-type-2 .cont-foot, .container-type-2 .content .cont-foot, .content-type-2 .cont-body .user-img, .container-type-2 .content .cont-body .user-img, .content-type-2 .cont-head .cont-head-user-cntrl button, .container-type-2 .content .cont-head .cont-head-user-cntrl button, .content-type-1 .cont-foot a.refer-to-source button, .container-type-1 .content .cont-foot a.refer-to-source button, .content-type-1 .cont-foot, .container-type-1 .content .cont-foot, .content-type-1 .cont-head .cont-head-user-cntrl button, .container-type-1 .content .cont-head .cont-head-user-cntrl button, .content-type-1 .cont-head .cont-head-subject div, .container-type-1 .content .cont-head .cont-head-subject div, .container header button, .post-shortcut header button, .hot-notification-container li a .notification-card div.notification-user-img, .left-sidebar footer div a, .left-sidebar footer div, .left-sidebar footer, .right-sidebar footer button, .right-sidebar main .container .shortcut-ctrl button, .right-sidebar main .post-shortcut .shortcut-ctrl button, .right-sidebar main .container a .shortcut-icon, .right-sidebar main .post-shortcut a .shortcut-icon, .header .r-side .search-bar, .header .r-side .user-profile a, .header .r-side .user-profile, .header .m-side .main-navigation ul li a, .header .m-side .main-navigation ul li, .header .l-side .toggle-menu-btn-container button, .header .l-side .toggle-menu-btn-container, .pankti a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fill-height, .content-type-3 .cont-foot div a, .container-type-3 .content .cont-foot div a, .content-type-3 .cont-head .cont-head-user-img a.refer-to-user, .container-type-3 .content .cont-head .cont-head-user-img a.refer-to-user, .content-type-3 .cont-head .cont-head-user-img, .container-type-3 .content .cont-head .cont-head-user-img, .content-type-2 .cont-foot a.refer-to-source, .container-type-2 .content .cont-foot a.refer-to-source, .content-type-1 .cont-foot a.refer-to-source, .container-type-1 .content .cont-foot a.refer-to-source, .content-type-1 .cont-head .cont-head-user-img a.refer-to-user, .container-type-1 .content .cont-head .cont-head-user-img a.refer-to-user, .content-type-1 .cont-head .cont-head-user-img, .container-type-1 .content .cont-head .cont-head-user-img, .left-sidebar, .right-sidebar main .container a div, .right-sidebar main .post-shortcut a div, .right-sidebar main .container a, .right-sidebar main .post-shortcut a, .left-sidebar header a, .right-sidebar header a, .header .m-side .main-navigation, .header .l-side, .pankti a, .pankti {
+  height: 100%;
+}
+
+.fill-width, .content-type-3 .cont-head .cont-head-subject span, .container-type-3 .content .cont-head .cont-head-subject span, .content-type-3 .cont-head .cont-head-subject, .container-type-3 .content .cont-head .cont-head-subject, .content-type-2 .cont-body .members, .container-type-2 .content .cont-body .members, .content-type-2 .cont-body .user-name, .container-type-2 .content .cont-body .user-name, .container main, .post-shortcut main, .hot-notification-container li a .notification-card div.notification-info div.notification-time, .hot-notification-container li a .notification-card div.notification-info div.notification-content, .hot-notification-container li a .notification-card div.notification-info .notification-head, .left-sidebar ul li a span, .left-sidebar ul li a, .right-sidebar main .container a .shortcut-description span, .right-sidebar main .post-shortcut a .shortcut-description span, .left-sidebar ul, .right-sidebar ul, .left-sidebar header a span, .right-sidebar header a span {
+  width: 100%;
+}
+
+.cover, .post-shortcut main form, .content-type-1 .cont-head .cont-head-subject div, .container-type-1 .content .cont-head .cont-head-subject div, .content-type-1 .cont-head .cont-head-subject, .container-type-1 .content .cont-head .cont-head-subject, .hot-notification-container li a .notification-card, .header .m-side .main-navigation ul li, .header .m-side .main-navigation ul {
+  height: 100%;
+  width: 100%;
+}
+
+.pd {
+  padding: 0.625rem;
+}
+
+.pd-r, .header .r-side {
+  padding-right: 0.625rem;
+}
+
+.pd-l, .header .l-side {
+  padding-left: 0.625rem;
+}
+
+.pd-t {
+  padding-top: 0.625rem;
+}
+
+.pd-b {
+  padding-bottom: 0.625rem;
+}
+
+.cover, .post-shortcut main form, .content-type-1 .cont-head .cont-head-subject div, .container-type-1 .content .cont-head .cont-head-subject div, .content-type-1 .cont-head .cont-head-subject, .container-type-1 .content .cont-head .cont-head-subject, .hot-notification-container li a .notification-card, .header .m-side .main-navigation ul li, .header .m-side .main-navigation ul {
+  height: 100%;
+  width: 100%;
+}
+
+.pre-def-link, .content-type-3 .cont-foot div a, .container-type-3 .content .cont-foot div a, .content-type-3 .cont-head .cont-head-user-img a.refer-to-user, .container-type-3 .content .cont-head .cont-head-user-img a.refer-to-user, .content-type-2 .cont-foot a.refer-to-source, .container-type-2 .content .cont-foot a.refer-to-source, .content-type-1 .cont-foot a.refer-to-source, .container-type-1 .content .cont-foot a.refer-to-source, .content-type-1 .cont-head .cont-head-user-img a.refer-to-user, .container-type-1 .content .cont-head .cont-head-user-img a.refer-to-user, .hot-notification-container li a, .left-sidebar footer div a, .left-sidebar ul li a, .right-sidebar main .container a, .right-sidebar main .post-shortcut a, .left-sidebar header a, .right-sidebar header a, .header .m-side .main-navigation ul li a, .pankti a {
+  color: unset;
+  text-decoration: none;
+}
+
+.button, .post-shortcut main form button, .content-type-3 .cont-foot div a button, .container-type-3 .content .cont-foot div a button, .content-type-3 .cont-head .cont-head-user-cntrl button, .container-type-3 .content .cont-head .cont-head-user-cntrl button, .content-type-2 .cont-foot a.refer-to-source button, .container-type-2 .content .cont-foot a.refer-to-source button, .content-type-2 .cont-head .cont-head-user-cntrl button, .container-type-2 .content .cont-head .cont-head-user-cntrl button, .content-type-1 .cont-foot a.refer-to-source button, .container-type-1 .content .cont-foot a.refer-to-source button, .content-type-1 .cont-head .cont-head-user-cntrl button, .container-type-1 .content .cont-head .cont-head-user-cntrl button, .container header button, .post-shortcut header button, .right-sidebar footer button, .right-sidebar main .container .shortcut-ctrl button, .right-sidebar main .post-shortcut .shortcut-ctrl button, .header .l-side .toggle-menu-btn-container button {
+  background-color: unset;
+  outline: none;
+  cursor: pointer;
+}
+
+.noscrollbar::-webkit-scrollbar, .container main::-webkit-scrollbar, .post-shortcut main::-webkit-scrollbar, .hot-notification-container::-webkit-scrollbar, .left-sidebar::-webkit-scrollbar, .left-sidebar ul::-webkit-scrollbar, .right-sidebar ul::-webkit-scrollbar {
+  display: none;
+}
+
+.noscrollbar, .container main, .post-shortcut main, .hot-notification-container, .left-sidebar, .left-sidebar ul, .right-sidebar ul {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.def-input, .post-shortcut main form input, .header .r-side .search-bar form input {
+  outline: none;
+  border: 1px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #c8c8c8;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+}
+.def-input::placeholder, .post-shortcut main form input::placeholder, .header .r-side .search-bar form input::placeholder {
+  color: #494949;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.textwrap, .content-type-3 .cont-head .cont-head-subject span, .container-type-3 .content .cont-head .cont-head-subject span, .content-type-2 .cont-body .members, .container-type-2 .content .cont-body .members, .content-type-2 .cont-body .user-name, .container-type-2 .content .cont-body .user-name, .content-type-1 .cont-head .cont-head-subject div, .container-type-1 .content .cont-head .cont-head-subject div, .hot-notification-container li a .notification-card div.notification-info div.notification-time, .hot-notification-container li a .notification-card div.notification-info div.notification-content, .hot-notification-container li a .notification-card div.notification-info .notification-head, .left-sidebar ul li a span, .right-sidebar main .container a .shortcut-description span, .right-sidebar main .post-shortcut a .shortcut-description span, .left-sidebar header a span, .right-sidebar header a span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.heading-2 {
+  font-size: 1.3rem;
+  padding: 0.625rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.ver-scroll, .hot-notification-container, .left-sidebar, .left-sidebar ul, .right-sidebar ul {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.hori-scroll, .container main, .post-shortcut main {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.def-list, .container main ul, .post-shortcut main ul, .left-sidebar ul, .right-sidebar ul, .header .m-side .main-navigation ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.heading, .container header, .post-shortcut header, .left-sidebar header a span, .right-sidebar header a span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.r-side {
+  width: 20%;
+}
+
+.m-side {
+  width: 60%;
+}
+
+.l-side {
+  width: 20%;
+}
+
+.pankti a img {
+  height: 60%;
+}
+.pankti a span {
+  font-size: 1.3rem;
+  margin-left: -3px;
+}
+
+.header {
+  z-index: 1500;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5rem;
+  background-color: #ffffff;
+}
+.header .l-side .toggle-menu-btn-container {
+  display: none;
+  margin-right: 0.625rem;
+}
+.header .l-side .toggle-menu-btn-container button {
+  border: none;
+  font-size: 1rem;
+  height: 100%;
+  padding: 0 0;
+  color: #494949;
+  height: initial;
+}
+.header .m-side .main-navigation ul li {
+  display: flex;
+}
+.header .m-side .main-navigation ul li a {
+  height: 45%;
+}
+.header .m-side .main-navigation ul li a img {
+  height: 100%;
+}
+.header .r-side .user-profile a {
+  height: 70%;
+  border-radius: 50%;
+}
+.header .r-side .user-profile a img {
+  height: 100%;
+}
+.header .r-side .search-bar {
+  margin-right: 0.625rem;
+}
+.header .r-side .search-bar form {
+  height: 70%;
+}
+.header .r-side .search-bar form input:focus::placeholder {
+  background-image: none;
+  padding-left: 0;
+}
+.header .r-side .search-bar form input::placeholder {
+  padding-left: 20px;
+  background-image: url(/icon/search/search.png);
+  background-position: left;
+  background-size: 15px;
+  background-repeat: no-repeat;
+}
+
+.left-sidebar, .right-sidebar {
+  z-index: 2000;
+  width: 20%;
+  position: fixed;
+  top: 3.5rem;
+  height: calc(100% - 3.5rem);
+  background-color: #ffffff;
+  transition: 0.3s all;
+}
+.left-sidebar header, .right-sidebar header {
+  position: relative;
+  height: 3rem;
+  margin-bottom: 0.315rem;
+  padding-left: 1rem;
+}
+.left-sidebar header::before, .right-sidebar header::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #afafaf;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.left-sidebar header a img, .right-sidebar header a img {
+  height: 50%;
+  margin-right: 0.315rem;
+}
+.right-sidebar {
+  right: 0;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.7);
+}
+.right-sidebar main ul {
+  padding: 0.625rem;
+}
+.right-sidebar main li:not(:first-child) {
+  margin-top: 1rem;
+}
+.right-sidebar main .container, .right-sidebar main .post-shortcut {
+  height: 3.5rem;
+  overflow: hidden;
+  padding: 0.315rem;
+}
+.right-sidebar main .container a, .right-sidebar main .post-shortcut a {
+  width: 96%;
+}
+.right-sidebar main .container a .shortcut-icon, .right-sidebar main .post-shortcut a .shortcut-icon {
+  width: 20%;
+}
+.right-sidebar main .container a .shortcut-icon img, .right-sidebar main .post-shortcut a .shortcut-icon img {
+  height: 60%;
+}
+.right-sidebar main .container a .shortcut-description, .right-sidebar main .post-shortcut a .shortcut-description {
+  padding: 0 0.315rem;
+  width: 80%;
+}
+.right-sidebar main .container a .shortcut-description .shortcut-title, .right-sidebar main .post-shortcut a .shortcut-description .shortcut-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.right-sidebar main .container a .shortcut-description .shortcut-type, .right-sidebar main .post-shortcut a .shortcut-description .shortcut-type {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #afafaf;
+}
+.right-sidebar main .container .shortcut-ctrl, .right-sidebar main .post-shortcut .shortcut-ctrl {
+  width: 4%;
+}
+.right-sidebar main .container .shortcut-ctrl button, .right-sidebar main .post-shortcut .shortcut-ctrl button {
+  border: none;
+  font-size: 1rem;
+  height: 100%;
+  padding: 0 0;
+  color: #494949;
+  height: initial;
+}
+.right-sidebar footer {
+  padding: 0.4rem 0.625rem;
+}
+.right-sidebar footer button {
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  height: 100%;
+  padding: 0 0.625rem;
+  background-color: #f80202;
+  color: #ffffff;
+  padding: 0.625rem;
+  width: 100%;
+}
+
+.left-sidebar {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.7);
+  left: 0;
+}
+.left-sidebar .pankti {
+  display: none;
+}
+.left-sidebar ul li a {
+  transition: 0.3s all;
+  padding: 0.625rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.left-sidebar ul li a i, .left-sidebar ul li a img {
+  margin-right: 1.5rem;
+  font-size: 1.3rem;
+  width: 20px;
+}
+.left-sidebar ul li:hover {
+  background-color: #c8c8c8;
+}
+.left-sidebar footer {
+  position: relative;
+  padding-top: 0.315rem;
+  margin-top: 0.625rem;
+}
+.left-sidebar footer::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #afafaf;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.left-sidebar footer div {
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.left-sidebar footer div:not(:first-child) {
+  margin-top: 0.315rem;
+}
+.left-sidebar footer div a {
+  padding: 0 0.5rem;
+}
+
+.main-content {
+  padding: 1rem;
+}
+
+.hot-notification-container {
+  height: 100%;
+}
+.hot-notification-container li {
+  padding: 0 0.625rem;
+}
+.hot-notification-container li:not(:first-child) {
+  margin-top: 0.625rem;
+}
+.hot-notification-container li a {
+  border-radius: 5px;
+}
+.hot-notification-container li a .notification-card {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #494949;
+  height: 5rem;
+  padding: 0.312rem 0.625rem;
+}
+.hot-notification-container li a .notification-card div.notification-user-img {
+  height: 100%;
+  margin-right: 0.625rem;
+}
+.hot-notification-container li a .notification-card div.notification-user-img img {
+  height: 60%;
+}
+.hot-notification-container li a .notification-card div.notification-info {
+  padding: 0 0.3rem;
+  height: 100%;
+  width: calc(100% - 50px);
+}
+.hot-notification-container li a .notification-card div.notification-info .notification-head .notification-username {
+  font-weight: bold;
+}
+.hot-notification-container li a .notification-card div.notification-info div.notification-time {
+  font-weight: 500;
+  color: #afafaf;
+}
+
+.container, .post-shortcut {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+.container:not(:first-child), .post-shortcut:not(:first-child) {
+  margin-top: 1rem;
+}
+.container header, .post-shortcut header {
+  position: relative;
+  height: 2.3rem;
+  padding: 0 0.625rem;
+}
+.container header::before, .post-shortcut header::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #afafaf;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.container header button, .post-shortcut header button {
+  border: none;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 0 0;
+  color: #494949;
+  height: initial;
+}
+.container main, .post-shortcut main {
+  padding: 0.625rem;
+}
+.container main ul, .post-shortcut main ul {
+  padding: 0 0.625rem;
+  padding-left: 0;
+}
+.container main ul li, .post-shortcut main ul li {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 0.625rem;
+}
+.container main ul li:not(:first-child), .post-shortcut main ul li:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.content-type-1, .container-type-1 .content {
+  height: 10rem;
+  width: 18.75rem;
+}
+.content-type-1 .cont-head, .container-type-1 .content .cont-head {
+  height: 15%;
+}
+.content-type-1 .cont-head .cont-head-user-img a.refer-to-user, .container-type-1 .content .cont-head .cont-head-user-img a.refer-to-user {
+  border-radius: 50%;
+}
+.content-type-1 .cont-head .cont-head-user-img a.refer-to-user img, .container-type-1 .content .cont-head .cont-head-user-img a.refer-to-user img {
+  height: 100%;
+}
+.content-type-1 .cont-head .cont-head-subject div, .container-type-1 .content .cont-head .cont-head-subject div {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.content-type-1 .cont-head .cont-head-user-cntrl button, .container-type-1 .content .cont-head .cont-head-user-cntrl button {
+  border: none;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 0 0;
+  color: #494949;
+}
+.content-type-1 .cont-body, .container-type-1 .content .cont-body {
+  height: 68%;
+}
+.content-type-1 .cont-foot, .container-type-1 .content .cont-foot {
+  height: 17%;
+}
+.content-type-1 .cont-foot a.refer-to-source button, .container-type-1 .content .cont-foot a.refer-to-source button {
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  height: 100%;
+  padding: 0 1rem;
+  background-color: #f80202;
+  color: #ffffff;
+}
+
+.content-type-2, .container-type-2 .content {
+  height: 9rem;
+  width: 6rem;
+}
+.content-type-2 .cont-head, .container-type-2 .content .cont-head {
+  height: 10%;
+}
+.content-type-2 .cont-head .cont-head-user-cntrl button, .container-type-2 .content .cont-head .cont-head-user-cntrl button {
+  border: none;
+  font-size: 1rem;
+  height: 100%;
+  padding: 0 0;
+  color: #494949;
+}
+.content-type-2 .cont-body, .container-type-2 .content .cont-body {
+  height: 73%;
+}
+.content-type-2 .cont-body .user-img, .container-type-2 .content .cont-body .user-img {
+  height: 55%;
+}
+.content-type-2 .cont-body .user-img img, .container-type-2 .content .cont-body .user-img img {
+  height: 100%;
+}
+.content-type-2 .cont-body .user-name, .container-type-2 .content .cont-body .user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.content-type-2 .cont-body .members, .container-type-2 .content .cont-body .members {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  color: #afafaf;
+  font-weight: 500;
+}
+.content-type-2 .cont-foot, .container-type-2 .content .cont-foot {
+  height: 17%;
+}
+.content-type-2 .cont-foot a.refer-to-source button, .container-type-2 .content .cont-foot a.refer-to-source button {
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  height: 100%;
+  padding: 0 1rem;
+  background-color: #f80202;
+  color: #ffffff;
+}
+
+.content-type-3, .container-type-3 .content {
+  height: 15rem;
+  width: 19rem;
+}
+.content-type-3 .cont-head, .container-type-3 .content .cont-head {
+  height: 15%;
+}
+.content-type-3 .cont-head .cont-head-user-img a.refer-to-user, .container-type-3 .content .cont-head .cont-head-user-img a.refer-to-user {
+  border-radius: 50%;
+}
+.content-type-3 .cont-head .cont-head-user-img a.refer-to-user img, .container-type-3 .content .cont-head .cont-head-user-img a.refer-to-user img {
+  height: 100%;
+}
+.content-type-3 .cont-head .cont-head-subject, .container-type-3 .content .cont-head .cont-head-subject {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.content-type-3 .cont-head .cont-head-user-cntrl button, .container-type-3 .content .cont-head .cont-head-user-cntrl button {
+  border: none;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 0 0.3rem;
+  color: #494949;
+}
+.content-type-3 .cont-body, .container-type-3 .content .cont-body {
+  height: 75%;
+}
+.content-type-3 .cont-foot, .container-type-3 .content .cont-foot {
+  height: 10%;
+}
+.content-type-3 .cont-foot div a button, .container-type-3 .content .cont-foot div a button {
+  border: none;
+  font-size: 1.3rem;
+  height: 100%;
+  padding: 0 0;
+  color: #494949;
+}
+.content-type-3 .cont-foot div a button span, .container-type-3 .content .cont-foot div a button span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem;
+}
+
+.post-shortcut main {
+  height: 3.5rem;
+}
+.post-shortcut main img {
+  height: 100%;
+}
+.post-shortcut main form input {
+  margin-right: 0.625rem;
+  margin-left: 0.625rem;
+}
+.post-shortcut main form button {
+  border: none;
+  font-size: 0;
+  height: 100%;
+  padding: 0 0;
+  color: #494949;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background-color: #ffffff;
+    padding: 3.5rem 0;
+  }
+
+  .header {
+    height: 3.5rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  }
+  .header .l-side {
+    width: 50%;
+  }
+  .header .l-side .toggle-menu-btn-container {
+    display: flex;
+  }
+  .header .m-side {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    height: 3.5rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  }
+  .header .r-side {
+    width: 50%;
+  }
+
+  .left-sidebar, .right-sidebar {
+    z-index: 2000;
+    width: 80%;
+    height: 100%;
+    top: 0;
+  }
+
+  .right-sidebar {
+    right: -100%;
+  }
+
+  .left-sidebar {
+    left: -100%;
+  }
+  .left-sidebar .pankti {
+    display: flex;
+    height: 3.5rem;
+    padding: 0;
+    padding-left: 0.625rem;
+  }
+  .left-sidebar .pankti img {
+    height: 70%;
+  }
+
+  .left-sidebar.active {
+    left: 0;
+  }
+
+  .container, .post-shortcut {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px -2px transparent;
+    padding: 0.625rem;
+    border-radius: 0;
+    padding: 0;
+  }
+  .container:not(:first-child), .post-shortcut:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

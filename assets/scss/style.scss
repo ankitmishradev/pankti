@@ -1,0 +1,858 @@
+@import "defaults";
+
+.cover{
+  height: 100%;
+  width: 100%;
+}
+
+.pre-def-link{
+  color: unset;
+  text-decoration: none;
+}
+
+.button{
+  background-color: unset;
+  outline: none;
+  cursor: pointer;
+}
+
+.noscrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.noscrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.def-input{
+  outline: none;
+  border:1px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: $colorsec;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+
+  &::placeholder{
+    color: $txtcolor;
+    font-size: 1rem;
+    font-weight:500;
+    letter-spacing: 1px;
+    opacity: 0.7;
+  }
+}
+
+.textwrap{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.heading-2{
+  font-size: 1.3rem;
+  padding: 0.625rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.ver-scroll{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.hori-scroll{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.def-list{
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none
+}
+
+.heading{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@mixin underline($width) {
+  position: relative;
+  &::before{
+    content: '';
+    height: 1px;
+    width: $width;
+    background-color: $colortri;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin top-underline($width) {
+  position: relative;
+  &::before{
+    content: '';
+    height: 1px;
+    width: $width;
+    background-color: $colortri;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@mixin hr($mrtop,$mrleft) {
+  height: 3px;
+  border: none;
+  margin: $mrtop $mrleft;
+  border-radius: 50px;
+  background-color: $colortri;
+}
+
+@mixin btn($bdr, $fs, $pd) {
+  @extend .button, .centered;
+  border: none;
+  border-radius: $bdr;
+  font-size: $fs;
+  height: 100%;
+  padding: 0 $pd;
+  background-color: $btncolor;
+  color: $colorpri;
+}
+
+@mixin btn-no-bg($pd, $fs) {
+  @extend .button, .centered;
+  border: none;
+  font-size: $fs;
+  height: 100%;
+  padding: 0 $pd;
+  color: $txtcolor;
+}
+
+@mixin defImg($height) {
+  height: $height;
+}
+
+@mixin heading($padding) {
+  font-size: $largetxt;
+  padding: $padding;
+  margin: 0;
+  font-weight: 500;
+}
+
+@mixin def-border($top,$bottom,$left,$right) {
+  border-top:$top;
+  border-bottom:$bottom;
+  border-left: $left;
+  border-right: $right;
+}
+
+@mixin all-border($width) {
+  border: $width solid $colortri;
+}
+
+@mixin sm-heading {
+  font-weight: 500;
+  font-size: $midtxt;
+}
+
+@mixin sm-heading-sec {
+  font-weight: 500;
+  font-size: $midtxt;
+  color: $colortri;
+}
+
+.r-side{
+  width: 20%;
+}
+
+.m-side{
+  width: 60%;
+}
+
+.l-side{
+  width: 20%;
+}
+
+.pankti{
+  @extend .fill-height;
+  a{
+    @extend .centered, .fill-height, .pre-def-link;
+
+    img{
+      height: 60%;
+    }
+
+    span{
+      font-size: 1.3rem;
+      margin-left: -3px;
+    }
+  }
+}
+
+.header{
+  z-index: 1500;
+  box-shadow: 0 0 4px rgba(0,0,0,0.7);
+  @extend .d-flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $headerHeight;
+  background-color: $colorpri;
+  
+  .l-side{
+    @extend .d-flex, .fill-height, .pd-l;
+    
+    .toggle-menu-btn-container{
+      @extend .centered;
+      display: none;
+      margin-right: 0.625rem;
+      button{
+        @include btn-no-bg(0, 1rem);
+        height: initial;
+      }
+    }
+
+  }
+
+  .m-side{
+    .main-navigation{
+      @extend .fill-height;
+      ul{
+        @extend .d-flex, .cover, .def-list;
+        li{
+          @extend .cover, .centered;
+          display: flex;
+          a{
+            @extend .pre-def-link, .centered;
+            height: 45%;
+            img{
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .r-side{
+    @extend .d-flex, .justify-end, .pd-r;
+
+    .user-profile{
+      @extend .centered;
+
+      a{
+        @extend .centered;
+        height: 70%;
+        border-radius: 50%;
+
+        img{
+          height: 100%;
+        }
+
+      }
+
+    }
+
+    .search-bar{
+      @extend .centered;
+      margin-right: 0.625rem;
+
+      form{
+        height: 70%;
+
+        input{
+          @extend .def-input;
+
+          &:focus{
+            &::placeholder{
+              background-image: none;
+              padding-left: 0;
+            }
+          }
+
+          &::placeholder{
+            padding-left: 20px;
+            background-image: url(/icon/search/search.png);
+            background-position: left;
+            background-size: 15px;
+            background-repeat: no-repeat;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}
+
+.left-sidebar, .right-sidebar{
+  z-index: 2000;
+  width: 20%;
+  position: fixed;
+  top: $headerHeight;
+  height: $restHeight;
+  background-color: $colorpri;
+  transition: 0.3s all;
+
+  header{
+    @include underline(100%);
+    height: 3rem;
+    margin-bottom: 0.315rem;
+    padding-left: 1rem;
+    
+    a{
+      @extend .d-flex, .align-center, .fill-height, .pre-def-link;
+
+      img{
+        @include defImg(50%);
+        margin-right: 0.315rem;
+      }
+
+      span{
+        @extend .fill-width, .textwrap, .heading;
+      }
+
+    }
+    
+  }
+
+  ul{
+    @extend .def-list, .fill-width, .ver-scroll, .noscrollbar;
+  }
+}
+
+.right-sidebar{
+  right: 0;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.7);
+  main{
+    ul{
+      padding: 0.625rem;
+    }
+
+    li{
+      &:not(:first-child){
+        margin-top: 1rem;
+      }
+    }
+
+    .container{
+      @extend .d-flex;
+      height: $headerHeight;
+      overflow: hidden;
+      padding: 0.315rem;
+      
+      a{
+        @extend .d-flex, .pre-def-link, .fill-height;
+        width: 96%;
+        
+        div{
+          @extend .fill-height, .d-flex;
+        }
+        .shortcut-icon{
+          @extend .centered;
+          width: 20%;
+          img{
+            @include defImg(60%);
+          }
+        }
+        .shortcut-description{
+          @extend .d-flex, .flow-col;
+          padding: 0 0.315rem;
+          width: 80%;
+          
+          span{
+            @extend .fill-width, .textwrap;
+          }
+          .shortcut-title{
+            @include sm-heading();
+          }
+          .shortcut-type{
+            @include sm-heading-sec();
+          }
+
+        }
+
+      }
+      .shortcut-ctrl{
+        width: 4%;
+        button{
+          @include btn-no-bg(0, $midtxt);
+          height: initial;
+        }
+      }
+
+    }
+  }
+
+  footer{
+    padding:0.4rem 0.625rem;
+    button{
+      @include btn(10px, 0.9rem, 0.625rem);
+      padding: 0.625rem;
+      width: 100%;
+    }
+  }
+}
+
+.left-sidebar{
+  box-shadow: 0 3px 4px rgba(0,0,0,0.7);
+  @extend .d-flex, .fill-height, .flow-col, .ver-scroll, .noscrollbar;
+  @extend .fill-height;
+  left: 0;
+
+  .pankti{
+    display: none;
+  }
+
+  ul{ 
+    li{
+      
+      a{
+        @extend .pre-def-link, .d-flex, .align-center, .fill-width;
+        transition: 0.3s all;
+        padding: 0.625rem;
+        padding-left: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform:capitalize;
+  
+        i, img{
+          margin-right: 1.5rem;
+          font-size: 1.3rem;
+          width: 20px;
+        }
+
+        span{
+          @extend .fill-width, .textwrap;
+        }
+
+      }
+
+      &:hover{
+        background-color: $colorsec;
+      }
+    }
+  }
+
+  footer{
+    @include top-underline(100%);
+    @extend .centered, .flow-col;
+    padding-top: 0.315rem;
+    margin-top: 0.625rem;
+    div{
+      @extend .centered;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      font-weight: 500;
+      &:not(:first-child){
+        margin-top: 0.315rem;
+      }
+      a{
+        @extend .centered, .pre-def-link;
+        padding: 0 0.5rem;
+      }
+    }
+
+  }
+}
+
+.main-content{
+  padding: 1rem;
+}
+
+.hot-notification-container{
+  @extend .ver-scroll;
+  @extend .noscrollbar;
+  height: 100%;
+  li{
+    padding: 0 0.625rem;
+    &:not(:first-child){
+      margin-top: 0.625rem;
+    }
+
+    a{
+      @extend .d-flex;
+      @extend .pre-def-link;
+      border-radius: 5px;
+      
+      .notification-card{
+        @extend .d-flex, .cover;
+        background-color: $colorpri;
+        box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        color: $txtcolor;
+        height: 5rem;
+        padding: 0.312rem 0.625rem;
+
+        div.notification-user-img{
+          @extend .centered;
+          height: 100%;
+          margin-right: 0.625rem;
+          img{
+            @include defImg(60%);
+          }
+        }
+
+        div.notification-info{
+          padding: 0 0.3rem;
+          height: 100%;
+          width: calc(100% - 50px);
+
+          .notification-head{
+            @extend .fill-width, .textwrap;
+
+            .notification-username{
+              font-weight:bold;
+            }
+          }
+
+          div.notification-content{
+            @extend .fill-width, .textwrap;
+          }
+
+          div.notification-time{
+            @extend .fill-width, .textwrap;
+            font-weight: 500;
+            color: $colortri;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container{
+
+  background-color: $colorpri;
+  border-radius: 10px;
+  box-shadow: $shadow;
+
+  &:not(:first-child){
+    margin-top: 1rem;
+  }
+ 
+  header{
+    @extend .d-flex, .justify-between, .align-center, .heading;
+    @include underline(100%);
+    height: 2.3rem;
+    padding: 0 0.625rem;
+    button{
+      @include btn-no-bg(0, 1.2rem);
+      height: initial;
+    }
+  }
+
+  main{
+    @extend .d-flex, .fill-width, .hori-scroll, .noscrollbar;
+    padding: 0.625rem;
+    ul{
+      @extend .d-flex, .def-list;
+      padding: 0 0.625rem;
+      padding-left: 0;
+      li{
+        @extend .d-flex, .flow-col;
+        box-shadow: $shadow;
+        border-radius: 10px;
+        background-color: $colorpri;
+        padding:0.625rem;
+        &:not(:first-child){
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.container-type-1{
+  .content{
+    @extend .content-type-1;
+  }
+}
+
+.content-type-1{
+  height: 10rem;
+  width: 18.75rem;
+  
+  .cont-head{
+    @extend .d-flex;
+    height: 15%;
+
+    .cont-head-user-img{
+      @extend .fill-height;
+      a.refer-to-user{
+        @extend .fill-height, .d-flex, .pre-def-link;
+        border-radius: 50%;
+        img{
+          @include defImg(100%)
+        }
+      }
+    }
+
+    .cont-head-subject{
+      @extend .cover;
+      div{
+        @extend .cover, .centered, .textwrap;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
+    
+    .cont-head-user-cntrl{
+      button{
+        @include btn-no-bg(0, 1.2rem);
+      }
+    }
+
+  }
+
+  .cont-body{
+    height: 68%;
+  }
+
+  .cont-foot{
+    @extend .centered;
+    height: 17%;
+    a.refer-to-source{
+      @extend .fill-height, .pre-def-link;
+      button{
+        @include btn(5px, 0.9rem, 1rem)
+      }
+    }
+  }
+}
+
+.container-type-2{
+  .content{
+    @extend .content-type-2;
+  }
+}
+
+.content-type-2{
+  height: 9rem;
+  width: 6rem;
+  .cont-head{
+    @extend .d-flex, .justify-end;
+    height: 10%;
+    .cont-head-user-cntrl{
+      button{
+        @include btn-no-bg(0, 1rem);
+      }
+    }
+
+  }
+
+  .cont-body{
+    height: 73%;
+    .user-img{
+      @extend .centered;
+      height: 55%;
+      img{
+        @include defImg(100%);
+      }
+    }
+    .user-name{
+      @extend .textwrap, .fill-width;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .members{
+      @extend .textwrap, .fill-width;
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+      color: $colortri;
+      font-weight: 500;
+    }
+  }
+
+  .cont-foot{
+    @extend .centered;
+    height: 17%;
+    a.refer-to-source{
+      @extend .fill-height, .pre-def-link;
+      button{
+        @include btn(5px, 0.9rem, 1rem)
+      }
+    }
+  }
+}
+
+.container-type-3{
+  .content{
+    @extend .content-type-3;
+  }
+}
+
+.content-type-3{
+  height: 15rem;
+  width: 19rem;
+
+  .cont-head{
+    @extend .d-flex;
+    height: 15%;
+    .cont-head-user-img{
+      @extend .fill-height;
+      a.refer-to-user{
+        @extend .fill-height, .d-flex, .pre-def-link;
+        border-radius: 50%;
+        img{
+          @include defImg(100%)
+        }
+      }
+    }
+    .cont-head-subject{
+      @extend .centered, .fill-width;
+      font-size: 1.1rem;
+      font-weight: 500;
+      span{
+        @extend .fill-width, .textwrap;
+      }
+    }
+    .cont-head-user-cntrl{
+      button{
+        @include btn-no-bg(0.3rem, 1.2rem);
+      }
+    }
+
+  }
+
+  .cont-body{
+    height: 75%;
+  }
+
+  .cont-foot{
+    @extend .d-flex, .justify-between;
+    height: 10%;
+    div{
+      @extend .d-flex;
+      a{
+        @extend .centered, .fill-height, .pre-def-link;
+        button{
+          @include btn-no-bg(0, 1.3rem);
+          span{
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem
+          }
+        }
+      }
+    }
+  }
+}
+
+.post-shortcut{
+  @extend .container;
+
+  main{
+    @extend .d-flex, .align-center;
+    height: 3.5rem;
+
+    img{
+      @include defImg(100%);
+    }
+    
+    form{
+      @extend .cover, .d-flex;
+
+      input{
+        @extend .def-input;
+        margin-right: 0.625rem;
+        margin-left: 0.625rem;
+      }
+
+      button{
+        @include btn-no-bg(0,0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width:900px){
+  body{
+    background-color: $colorpri;
+    padding: $headerHeight 0;
+  }
+
+  .header{
+    
+    height: $headerHeight;
+    box-shadow:$shadow;
+  
+    .l-side{
+      width: 50%;
+      .toggle-menu-btn-container{
+        @extend .centered;
+        display: flex;
+      }
+    }
+  
+    .m-side{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: $colorpri;
+      height: $headerHeight;
+      box-shadow: $shadow;
+    }
+  
+    .r-side{
+      width: 50%;
+    }
+  
+  }
+
+  .left-sidebar, .right-sidebar{
+    z-index: 2000;
+    width: 80%;
+    height: 100%;
+    top:0;
+  }
+  
+  .right-sidebar{
+    right: -100%;
+  }
+  
+  .left-sidebar{
+    left: -100%;
+    .pankti{
+      display: flex;
+      height: $headerHeight;
+      padding: 0;
+      padding-left: 0.625rem;
+      img{
+        @include defImg(70%);
+      }
+    }
+  }
+
+  .left-sidebar.active{
+     left: 0; 
+  }
+
+  .container{
+    background-color: $colorpri;
+    box-shadow: 0 0 5px -2px transparent;
+    padding: 0.625rem;
+    border-radius:0;
+    padding: 0;
+    &:not(:first-child){
+      margin-top: 0.5rem;
+    }
+  }
+
+  .main-content{
+    padding: 0;
+  }
+}
+
+

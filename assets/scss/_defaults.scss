@@ -1,0 +1,125 @@
+$colorpri : #ffffff;
+$colorsec: rgb(200, 200, 200);
+$colortri: rgb(175, 175, 175);
+$txtcolor: rgb(73, 73, 73);
+$headerHeight: 3.5rem;
+$restHeight: calc(100% - 3.5rem);
+$linkcolor: yellow;
+$btncolor: #f80202;
+$bdr:10px;
+$xlargetxt: 1.4rem;
+$largetxt:1.2rem;
+$midtxt:1rem;
+$smalltxt:0.8rem;
+$xsmaltxt:0.6rem;
+$border: 1px solid $colortri;
+$shadow: 0 0 4px rgba(0,0,0,0.7);
+
+*,*::after,*::before,*::placeholder{
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  color: $txtcolor;
+  background-color: $colorsec;
+  padding: $headerHeight 20% 0 20%;
+}
+
+.d-block{
+  display: block;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.i-flex{
+  display: inline-flex;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+
+.flow-col{
+  flex-direction: column;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
+.justify-start{
+  justify-content: flex-start;
+}
+
+.align-between{
+  align-items: space-between;
+}
+
+.align-around{
+  align-items: space-around;
+}
+
+.align-end{
+  align-items: flex-end;
+}
+
+.align-start{
+  align-items: flex-start;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fill-height{
+  height: 100%;
+}
+
+.fill-width{
+  width: 100%;
+}
+
+.cover{
+  height: 100%;
+  width: 100%;
+}
+
+.pd{
+  padding: 0.625rem;
+}
+
+.pd-r{
+  padding-right: 0.625rem;
+}
+.pd-l{
+  padding-left: 0.625rem;
+}
+.pd-t{
+  padding-top: 0.625rem;
+}
+.pd-b{
+  padding-bottom: 0.625rem;
+}
